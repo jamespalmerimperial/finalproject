@@ -4,20 +4,23 @@ See the [example Google model cards](https://modelcards.withgoogle.com/model-rep
 
 ## Model Description
 
-**Input:** Describe the inputs of your model 
+**Input:** 
+vector of numbers representing data of house that has been sold at an input date
 
-**Output:** Describe the output(s) of your model
+**Output:** 
+prediction of price at sale of the house 
 
-**Model Architecture:** Describe the model architecture you’ve used
+**Model Architecture:** 
+Random Forest regressor with hyper parameters tuned by bayesian optimisation
 
 ## Performance
 
-Give a summary graph or metrics of how the model performs. Remember to include how you are measuring the performance and what data you analysed it on. 
+R^2 tested on unseen data of 0.85, the model was tested on 216 unseen pieces of data from the dataset.
 
 ## Limitations
 
-Outline the limitations of your model.
+This model is limited to predicting house prices of houses sold in cook county washington between 2014-2015. the further outside that time window and further from that geographic location, the less well the model will perform although the model might perform quite well for cases that are vaguely close.
 
 ## Trade-offs
 
-Outline any trade-offs of your model, such as any circumstances where the model exhibits performance issues. 
+Strong predictive power was achieved with a model that managed to account for 85% of the variance, however  the trade-off is that the model is not interpretable so it can't be used to infer what might cause differences in house sale price 
