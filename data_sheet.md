@@ -1,43 +1,35 @@
-# Datasheet Template
+# Datasheet: House Sales in King County, USA
 
 As far as you can, complete the model datasheet. If you have got the data from the internet, you may not have all the information you need, but make sure you include all the information you do have. 
 
 ## Motivation
 
-- For what purpose was the dataset created? 
-- Who created the dataset (e.g., which team, research group) and on behalf of which entity (e.g., company, institution, organization)? Who funded the creation of the dataset?
+The data comes from official public records of home sales in the King County area, Washington State collected by the government. 
+I was not able to find the official reason why home sales data was recorded in public records by the government.
 
  
 ## Composition
+The instances that comprise the dataset represent the price that a house in King County was sold for between may 2014 and may 2015 and information about that house. There are 21613 instances of these sold houses. There is no missing data. There is no confidential data.
 
-- What do the instances that comprise the dataset represent (e.g., documents, photos, people, countries)? 
-- How many instances of each type are there? 
-- Is there any missing data?
-- Does the dataset contain data that might be considered confidential (e.g., data that is protected by legal privilege or by    doctor–patient confidentiality, data that includes the content of individuals’ non-public communications)?
 
 ## Collection process
 
-- How was the data acquired? 
-- If the data is a sample of a larger subset, what was the sampling strategy? 
-- Over what time frame was the data collected?
+The data are public records available from the King County government website. I assume that King County  has a policy that houses sold must record their sale data. The data is subset of the King county sale data available from other years. The sampling strategy was to choose a year which interested the person who originally created the csv file. The data was collected from may 2014-may 2015.
 
 ## Preprocessing/cleaning/labelling
 
-- Was any preprocessing/cleaning/labeling of the data done (e.g., discretization or bucketing, tokenization, part-of-speech tagging, SIFT feature extraction, removal of instances, processing of missing values)? If so, please provide a description. If not, you may skip the remaining questions in this section. 
-- Was the “raw” data saved in addition to the preprocessed/cleaned/labeled data (e.g., to support unanticipated future uses)? 
- 
+To pre-process the data, the date string was converted into number of days since 01.01.2001  and any other strings of numbers in the table were converted into numbers.  The raw data was included and the cleaning was performed within the analysis carried out in the jupyter notebook.
+
 ## Uses
 
-- What other tasks could the dataset be used for? 
-- Is there anything about the composition of the dataset or the way it was collected and preprocessed/cleaned/labeled that might impact future uses? For example, is there anything that a dataset consumer might need to know to avoid uses that could result in unfair treatment of individuals or groups (e.g., stereotyping, quality of service issues) or other risks or harms (e.g., legal risks, financial harms)? If so, please provide a description. Is there anything a dataset consumer could do to mitigate these risks or harms? 
-- Are there tasks for which the dataset should not be used? If so, please provide a description.
+The dataset could also be used to develop explanatory models for what effect different house data has on sales price, and used for exploratory data analysis about the characteristics of houses in the king county area and what house features are associated with other house features.  I can not foresee any harm that could be caused by this dataset  since houses are practically unidentifiable and can't be used to harm any groups or individuals. Like any dataset, this dataset should not be used to extrapolate to datasets that are drawn from a different, not-similar distribution. 
+
 
 ## Distribution
 
-- How has the dataset already been distributed? 
-- Is it subject to any copyright or other intellectual property (IP) license, and/or under applicable terms of use (ToU)?  
+The dataset has been distributed on kaggle at https://www.kaggle.com/datasets/harlfoxem/housesalesprediction/data the license of the dataset is CC0: Public Domain.
 
 ## Maintenance
 
-- Who maintains the dataset?
+Nobody maintains the dataset
 
